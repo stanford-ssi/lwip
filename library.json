@@ -1,18 +1,21 @@
 {
   "name": "lwip",
-  "version": "10.4.6",
-  "headers": [
-  ],
+  "version": "99",
   "build" : {
+    "srcDir": ".",
     "srcFilter": [
-      "+<*.c>",
-      "-<contrib/>",
-      "+<contrib/ports/freertos/>"
+      "+<*>",
+      "-<doc>",
+      "-<test>",
+      "-<src/apps>",
+      "-<contrib>",
+      "+<contrib/ports/freertos>"
     ],
     "flags": [
       "-I src/include/",
       "-I src/include/netif/",
-      "-I contrib/ports/freertos/include/"
+      "-I contrib/ports/freertos/include/",
+      "-D LWIP_COMPAT_MUTEX_ALLOWED"
     ]
   }
 }
