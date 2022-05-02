@@ -9,7 +9,9 @@
       "-<test>",
       "-<src/apps>",
       "-<contrib>",
-      "+<contrib/ports/freertos>"
+      "+<contrib/ports/freertos>",
+      "-<src/netif>",
+      "+<src/netif/ethernet.c>"
     ],
     "flags": [
       "-I src/include/",
